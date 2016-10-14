@@ -57,6 +57,6 @@ public protocol ESRefreshAnimatorProtocol {
     var insets: UIEdgeInsets {set get}
     var trigger: CGFloat {set get}
     var executeIncremental: CGFloat {set get}
-    
+    var refreshOnTop: Bool {set get}
     
 }

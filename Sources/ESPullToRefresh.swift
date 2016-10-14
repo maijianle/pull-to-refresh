@@ -257,10 +257,14 @@ open class ESRefreshHeaderView: ESRefreshComponent {
                 }
             }
         } else if offsetWithoutInsets < 0 {
-            // Pull to refresh!
-            if loading == false && animating == false {
-                self.animator.refresh(view: self, stateDidChange: .pullToRefresh)
-                update = true
+            if self.animator.refreshOnTop {
+                self.loading = true
+            }else {
+                // Pull to refresh!
+                if loading == false && animating == false {
+                    self.animator.refresh(view: self, stateDidChange: .pullToRefresh)
+                    update = true
+                }
             }
         } else {
             // Normal state
