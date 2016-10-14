@@ -37,7 +37,7 @@ public class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimat
     public var trigger: CGFloat = 60.0
     public var executeIncremental: CGFloat = 60.0
     public var view: UIView { return self }
-    
+    public var refreshOnTop = false
     private let imageView: UIImageView = {
         let imageView = UIImageView.init()
         imageView.image = UIImage.init(named: "icon_pull_to_refresh_arrow")

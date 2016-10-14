@@ -35,7 +35,7 @@ public class ESRefreshAnimator: ESRefreshProtocol, ESRefreshAnimatorProtocol {
     public var trigger: CGFloat = 60.0
     // Offset y refresh event executed by this parameter you can customize the animation to perform when you refresh the view of reservations height
     public var executeIncremental: CGFloat = 60.0
-        
+    public var refreshOnTop = false
     public init() {
         view = UIView()
         insets = UIEdgeInsetsZero

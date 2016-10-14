@@ -34,7 +34,7 @@ public class ESRefreshFooterAnimator: UIView, ESRefreshProtocol, ESRefreshAnimat
     public var insets: UIEdgeInsets = UIEdgeInsetsZero
     public var trigger: CGFloat = 42.0
     public var executeIncremental: CGFloat = 42.0
-    
+    public var refreshOnTop = false
     private let titleLabel: UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
         label.font = UIFont.systemFontOfSize(14.0)

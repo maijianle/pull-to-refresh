@@ -233,10 +233,14 @@ public class ESRefreshHeaderView: ESRefreshComponent {
                 }
             }
         } else if offsetWithoutInsets < 0 {
-            // Pull to refresh!
-            if loading == false && animating == false {
-                self.animator.refresh(self, stateDidChange: .PullToRefresh)
-                update = true
+            if self.animator.refreshOnTop {
+                self.loading = true
+            }else {
+                // Pull to refresh!
+                if loading == false && animating == false {
+                    self.animator.refresh(self, stateDidChange: .PullToRefresh)
+                    update = true
+                }
             }
         } else {
             
