@@ -235,7 +235,9 @@ public class ESRefreshHeaderView: ESRefreshComponent {
         } else if offsetWithoutInsets < 0 {
             if self.animator.refreshOnTop {
                 if loading == false && animating == false {
-                    self.loading = true
+                    if scrollView.dragging == false {
+                        self.loading = true
+                    }
                 }
             }else {
                 // Pull to refresh!
